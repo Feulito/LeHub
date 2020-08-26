@@ -1,0 +1,11 @@
+<nav class="col-lg-12">
+  <a class="logo" routerLinkActive="active" routerLink="">Le Hub</a>
+  <ul class="col-lg-4" *ngIf="!isAuth">
+      <li routerLinkActive="active" *ngIf="!isAuth"><a routerLink="signin/entreprise">Entreprise</a></li>
+      <li routerLinkActive="active"*ngIf="!isAuth"><a routerLink="signin/freelance">Freelance</a></li>
+  </ul>
+  <ul class="col-lg-6" *ngIf="isAuth">
+    <li routerLinkActive="active" *ngIf="isAuth"><a routerLink="view/entreprises">Voir les entreprises</a></li>
+    <li routerLinkActive="active" *ngIf="isAuth"><a routerLink="" (click)="onDisconnect()">Se déconnecter</a></li>
+  </ul>
+</nav>

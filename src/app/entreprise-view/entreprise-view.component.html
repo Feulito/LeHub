@@ -1,0 +1,8 @@
+<p>Ca marche :</p>
+<div *ngFor="let entreprise of entreprises; let i = index">
+    <div>
+      <h2>{{ entreprise.nom }}</h2>
+      <h3>Dirigée par {{ entreprise.dirigeant }}</h3>
+      <p *ngIf="entreprise.description">{{ entreprise.description }}</p>
+    </div>
+</div>

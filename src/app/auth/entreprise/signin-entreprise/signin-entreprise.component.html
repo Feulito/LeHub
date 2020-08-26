@@ -1,0 +1,21 @@
+<div class="row">
+  <div class="col-lg-6">
+    <form [formGroup]="entrepriseForm" (ngSubmit)="onSubmit()" *ngIf="!isAuth">
+      <h1>Se connecter comme entreprise</h1>
+      <div class="form-group">
+        <label for="nomcon">Mail de l'entreprise</label>
+        <input type="text" id="nomcon" class="form-control" formControlName="mail">
+      </div>
+      <div class="form-group">
+        <label for="passcon">Mot de passe</label>
+        <input type="password" id="passcon" class="form-control" formControlName="password">
+      </div>
+      <button type="submit" [disabled]="entrepriseForm.invalid">Se connecter</button>
+      <p class="text-danger">{{ errorMessage }}</p>
+    </form>
+    <button *ngIf="isAuth" (click)="onSignOut()">Se déconnecter</button>
+  </div>
+  <div class="col-lg-6">
+    <app-signup-entreprise></app-signup-entreprise>
+  </div>
+</div>

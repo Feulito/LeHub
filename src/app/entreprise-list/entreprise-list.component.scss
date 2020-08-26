@@ -1,0 +1,32 @@
+.ent {
+  border: 1px solid black;
+  padding: 10px;
+  margin: 5px;
+  height: 300px;
+  transition: 0.5s;
+}
+
+.ent:hover {
+  border-color: rgba(255, 0, 0, 0.678);
+  box-shadow: 0 0 5px rgba(255, 0, 0, 0.582);
+}
+
+.ent:hover h2 {
+  border-color: rgba(255, 0, 0, 0.582);;
+}
+
+h2::first-letter {
+  text-transform: uppercase;
+}
+
+h2 {
+  text-align: center;
+  font-weight: bold;
+  border-bottom: 1px solid black;
+  transition: 0.5s
+}
+
+h1 {
+  text-align: center;
+  font-size: 50px;
+}

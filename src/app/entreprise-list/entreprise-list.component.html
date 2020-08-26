@@ -1,0 +1,10 @@
+<div class="row">
+    <h1>Liste des entreprises</h1>
+      <div *ngFor="let entreprise of entreprises; let i = index" class="col-lg-4">
+        <div class="ent">
+          <h2>{{ entreprise.nom }}</h2>
+          <h3>Dirigée par {{ entreprise.dirigeant }}</h3>
+          <p *ngIf="entreprise.description">{{ entreprise.description }}</p>
+        </div>
+    </div>
+</div>

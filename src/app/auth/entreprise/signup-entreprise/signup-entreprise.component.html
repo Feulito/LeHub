@@ -1,0 +1,28 @@
+<form [formGroup]="entrepriseForm" (ngSubmit)="onSubmit()">
+  <h1>Inscrire son entreprise</h1>
+  <div class="form-group">
+    <label for="nom">Nom de l'entreprise</label>
+    <input type="text" id="nom" class="form-control" formControlName="nom">
+  </div>
+  <div class="form-group">
+    <label for="mail">Mail de l'entreprise</label>
+    <input type="email" id="mail" class="form-control" formControlName="mail">
+  </div>
+  <div class="form-group">
+    <label for="siret">Numéro de siret</label>
+    <input type="text" id="siret" class="form-control" formControlName="siret">
+  </div>
+  <div class="form-group">
+    <label for="dirigeant">Dirigeant de l'entreprise</label>
+    <input type="text" id="dirigeant" class="form-control" formControlName="dirigeant">
+  </div>
+  <div class="form-group">
+    <label for="desc">Description de l'entreprise</label>
+    <textarea id="desc" class="form-control" formControlName="description" placeholder="Une description de votre entreprise"></textarea>
+  </div>
+  <div class="form-group">
+    <label for="pass">Mot de passe</label>
+    <input type="password" id="pass" class="form-control" formControlName="password">
+  </div>
+  <button type="submit" [disabled]="entrepriseForm.invalid">Inscrire l'entreprise</button>
+</form>
